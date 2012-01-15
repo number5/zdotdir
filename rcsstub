@@ -1,0 +1,29 @@
+#!/usr/bin/env zsh
+# rcsstub
+#
+# Stub for all .z* files; actual content comes from a directory
+#
+
+setopt EXTENDED_GLOB CSH_NULL_GLOB
+
+sourcedir() {
+    if [ ! -d "$1" ]; then
+        echo "directory $1 not exists!"
+        return 1
+    fi
+    for f in "$1"/[0-9][0-9]-*[^~]; do
+        case $f in 
+            *~|*.bak|*.old|*.sw?|*.zwc|*.disabled) continue;;
+        esac
+        echo "  sourcing file $f"
+        source "$f"
+    done
+}
+
+if [[ -o rcs ]]; then
+  _DIR=$ZDOTDIR/${${(%):-%1N}#.}.d
+  sourcedir $_DIR
+  unset _DIR
+fi
+
+# vim:ft=zsh
