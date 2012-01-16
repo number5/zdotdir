@@ -4,7 +4,7 @@
 # Stub for all .z* files; actual content comes from a directory
 #
 
-setopt EXTENDED_GLOB CSH_NULL_GLOB
+setopt EXTENDED_GLOB NULL_GLOB
 
 sourcedir() {
     if [ ! -d "$1" ]; then
