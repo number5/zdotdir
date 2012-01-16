@@ -13,5 +13,7 @@ autoload -U colors ; colors
 # allow zwc file recompiling
 autoload -U zrecompile
 
-autoload -Uz compinit; compinit
+autoload -U compinit; compinit
+
+autoload -Uz add-zsh-hook
 # vim:ft=zsh
