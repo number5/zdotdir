@@ -1,0 +1,18 @@
+# ZSH Theme 
+
+setopt ALL_EXPORT
+
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+RPS1="${return_code} $PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
+
+# Shell options
+TIMEFMT=$'real\t%*Es\nuser\t%*Us\nsys \t%*Ss\ncpu \t%P'
+
+
+
+PS1='%F{3}%3~ ${vcs_info_msg_0_}%f%(!.#.$) '
+ 
+
+unsetopt ALL_EXPORT
+#ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}‹"
+#ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$reset_color%}"
