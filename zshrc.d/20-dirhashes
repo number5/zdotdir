@@ -1,4 +1,3 @@
-
 cdpath=(. ~/work ~/src/git)
 
 hash -d durian=/home/bwang/work/durian
