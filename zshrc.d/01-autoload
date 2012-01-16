@@ -1,5 +1,5 @@
 # autoload all executable files in $fpath
-autoload -U $^fpath/*(.xN:t)
+#autoload -U $^fpath/*(.xN:t)
 
 # smart xargs replacement
 autoload -U zargs
