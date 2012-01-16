@@ -1,0 +1,34 @@
+#! /bin/zsh
+
+setopt ALL_EXPORT
+# editor
+EDITOR=vi
+VISUAL=vi
+
+# python env
+
+PYTHONPATH=.
+VIRTUALENV_USE_DISTRIBUTE=1
+DF_LOG_DIR=~/tmp
+
+# TERM
+TERM=xterm-256color 
+ZSH_THEME_TERM_TITLE_IDLE="%~ (%n@%m)" 
+
+# node/nave
+
+NAVE_DIR=/home/bwang/.nave
+NAVE_SRC=$NAVE_DIR/src
+NAVE_ROOT=$NAVE_DIR/installed
+#NAVEVERSION=0.6.6
+#NAVE=0.6.6-default
+NAVENAME=default
+PATH=$NAVE_ROOT/$NAVENAME/bin:$PATH
+NODE_PATH=$NAVE_ROOT/$NAVENAME/lib/node
+#NAVELVL=1
+
+#jsctags
+NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+unsetopt ALL_EXPORT
+# vi:ft=zsh
+

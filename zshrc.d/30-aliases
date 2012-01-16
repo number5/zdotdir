@@ -1,0 +1,145 @@
+
+alias try="buildbot try"
+alias tryut="buildbot try -b general10.04"
+alias tryft="buildbot try -b general10.04ft"
+
+alias lighton='disper -d DFP-0,DFP-3 -r 1920x1080,1600x900 -e -t right'
+alias ack='ack-grep'
+alias dt='./bin/dftrial --reporter=text --skip="longrunning"'
+alias tag='git describe --abbrev=0'
+alias gbm='git branch --merged'
+alias gfc='git fetch origin'
+alias gds="git diff --stat"
+alias gl="git log --graph --pretty=format:'%C(magenta)%h%Creset -%C(bold green)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gr='git remote -v'
+alias gs="git status"
+alias igu='iconv -f gb18030 -t utf8'
+alias q='qgit'
+alias v="gvim --remote-silent"
+alias rmpyc='zargs **/*.pyc -- rm'
+alias tmux='tmux -2'
+alias vi='TERM=xterm-256color vim'
+
+alias mv='nocorrect mv'
+alias cp='nocorrect cp'
+alias ln='nocorrect ln'
+alias mkdir='nocorrect mkdir'
+alias rm='nocorrect rm'
+alias find='noglob find'
+alias w3m='noglob w3m -no-mouse'
+alias links='noglob links'
+alias wb='noglob www-browser'
+alias wget='noglob wget'
+alias curl='noglob curl'
+alias locate='noglob locate'
+
+local _USER_AGENT="Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.14) Gecko/20080404 Iceweasel/2.0.0.14 (Debian-2.0.0.14-2)"
+alias swget="noglob wget --user-agent='$USER_AGENT'"
+
+typeset -a _ls_opts; _ls_opts=(-bC --color=auto)
+command ls --group-directories-first >/dev/null 2>&1 \
+  && _ls_opts+=--group-directories-first
+# I prefer POSIX collation for ls
+alias ls="LC_COLLATE=POSIX ls $_ls_opts"
+
+alias ll='ls -l'
+alias l=ll
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls -lt'
+alias lrt='ls -lrt'
+alias lat='ls -lat'
+alias lart='ls -lart'
+# List only directories and symbolic links that point to directories
+alias lsd='ll -d *(-/DN)'
+
+alias lscontext=ll
+# cd () { __CHPWD_RUN_FIRST=lscontext && builtin cd "$@" && unset __CHPWD_RUN_FIRST }
+# _cd_l() { ll }
+# chpwd_functions+=_cd_l
+
+alias egrep='egrep --color=auto -d skip'
+alias fgrep='fgrep --color=auto -d skip'
+alias grep='grep --color=auto -d skip'
+
+alias mmv='noglob zmv -W'
+alias zcp='zmv -C'
+alias zln='zmv -L'
+alias zgmv='zmv -p git-mv'
+
+alias cal='cal -3'
+alias ftp=lftp
+
+
+if whence mtail >/dev/null; then
+  alias t=mtail
+elif whence tailf >/dev/null; then
+  alias t=tailf
+else
+  alias t='tail -f'
+fi
+alias sensible-pager='less'
+alias tsl='t /var/log/syslog.log'
+alias lsl='sensible-pager /var/log/syslog.log'
+alias tml='t /var/log/mail.log'
+alias lml='sensible-pager /var/log/mail.log'
+alias tal='t /var/log/auth.log'
+alias lal='sensible-pager /var/log/auth.log'
+alias tdl='t /var/log/daemon.log'
+alias ldl='sensible-pager /var/log/daemon.log'
+alias tkl='t /var/log/kern.log'
+alias lkl='sensible-pager /var/log/kern.log'
+
+alias px='ps afux'
+alias mps='ps -ao user,pcpu,start,command'
+
+function of() { lsof -np "$1" }
+compdef _pids of
+
+function psgrep() { ps aux | grep "[${1[1]}]${1[2,-1]}" }
+
+alias bofh='fortune bofh-excuses'
+
+autoload -U baseconv
+alias b2d='baseconv 2 10'
+alias d2b='baseconv 10 2'
+alias d2h='baseconv 10 16'
+alias h2d='baseconv 16 10'
+alias d2o='baseconv 10 8'
+alias d2o='baseconv 10 8'
+alias h2b='baseconv 16 2'
+alias b2h='baseconv 2 16'
+
+_d() { dict $* }
+d() { _d $* | sensible-pager }
+the() { d -d moby-thesaurus $* }
+typeset -A _LANGUAGES
+_LANGUAGES[en]=eng
+_LANGUAGES[de]=deu
+_LANGUAGES[es]=spa
+_LANGUAGES[fr]=fra
+_LANGUAGES[it]=ita
+_LANGUAGES[tn]=lat
+for l0 in ${(k)_LANGUAGES}; do
+  for l1 in ${(k)_LANGUAGES}; do
+    eval "function _${l0}-${l1}() { _d -d fd-${_LANGUAGES[$l0]}-${_LANGUAGES[$l1]} \$* }"
+    eval "function ${l0}-${l1}() { d -d fd-${_LANGUAGES[$l0]}-${_LANGUAGES[$l1]} \$* }"
+  done
+done
+unset '_LANGUAGES[en]'
+for l in ${(k)_LANGUAGES}; do
+  eval "function ${l}() { (_${l}-en \$*; _en-${l} \$*) | more }"
+done
+unset _LANGUAGES
+
+
+uc() { unicode --max=0 --colour=off "$@" | sensible-pager }
+
+alias ipr='ip r'
+alias ipa='ip a'
+alias ipl='ip l'
+
+
+
+
+# vim:ft=zsh
