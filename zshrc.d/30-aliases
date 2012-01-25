@@ -48,6 +48,11 @@ alias lrt='ls -lrt'
 alias lat='ls -lat'
 alias lart='ls -lart'
 
+# ubuntu
+alias acp="apt-cache policy"
+alias acs="apt-cache search"
+
+
 if whence mtail >/dev/null; then
   alias t=mtail
 elif whence tailf >/dev/null; then
@@ -81,7 +86,7 @@ function current_branch() {
 
 # these aliases take advantage of the previous function
 alias gpull='git pull origin $(current_branch)'
-alias gpush='git push origin $(current_branch)'
+alias gpush='git push -u origin $(current_branch)'
 
 
 # grml aliases
