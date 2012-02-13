@@ -9,6 +9,7 @@ alias dt='./bin/dftrial --reporter=text --skip="longrunning"'
 alias tag='git describe --abbrev=0'
 alias gbm='git branch --merged'
 alias gfc='git fetch origin'
+alias gpull='git pull'
 alias gds="git diff --stat"
 alias gl="git log --graph --pretty=format:'%C(magenta)%h%Creset -%C(bold green)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gr='git remote -v'
@@ -85,7 +86,6 @@ function current_branch() {
 }
 
 # these aliases take advantage of the previous function
-alias gpull='git pull origin $(current_branch)'
 alias gpush='git push -u origin $(current_branch)'
 
 
