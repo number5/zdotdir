@@ -34,7 +34,7 @@ alias wget='noglob wget'
 alias curl='noglob curl'
 alias locate='noglob locate'
 
-typeset -a _ls_opts; _ls_opts=(-bC --color=auto)
+typeset -a _ls_opts; _ls_opts=(-bCF --color=auto)
 command ls --group-directories-first >/dev/null 2>&1 \
   && _ls_opts+=--group-directories-first
 # I prefer POSIX collation for ls

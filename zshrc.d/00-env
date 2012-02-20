@@ -5,8 +5,11 @@ setopt ALL_EXPORT
 EDITOR=vi
 VISUAL=vi
 
-# python env
+# color setup for ls
 
+eval $(dircolors -b)
+
+# python env
 PYTHONPATH=.
 VIRTUALENV_USE_DISTRIBUTE=1
 DF_LOG_DIR=~/tmp
