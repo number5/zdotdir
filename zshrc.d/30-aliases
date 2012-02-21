@@ -3,6 +3,7 @@ alias try="buildbot try"
 alias tryut="buildbot try -b general10.04"
 alias tryft="buildbot try -b general10.04ft"
 
+alias venv="virtualenv --python=python2.7 --system-site-packages --distribute"
 alias lighton='disper -d DFP-0,DFP-3 -r 1920x1080,1600x900 -e -t right'
 alias ack='ack-grep'
 alias dt='./bin/dftrial --reporter=text --skip="longrunning"'
@@ -18,6 +19,7 @@ alias igu='iconv -f gb18030 -t utf8'
 alias q='qgit'
 alias v="gvim --remote-silent"
 alias rmpyc='zargs **/*.pyc -- rm'
+alias rmorig='zargs **/*.orig -- rm'
 alias tmux='tmux -2'
 alias vi='TERM=xterm-256color vim'
 
