@@ -26,11 +26,11 @@ NAVE_ROOT=$NAVE_DIR/installed
 #NAVEVERSION=0.6.6
 #NAVE=0.6.6-default
 NAVENAME=default
-PATH=$NAVE_ROOT/$NAVENAME/bin:$PATH
-NODE_PATH=$NAVE_ROOT/$NAVENAME/lib/node
+PATH=$NAVE_ROOT/$NAVENAME/bin:/opt/vagrant/bin:$PATH
+NODE_PATH=$NAVE_ROOT/$NAVENAME/lib/node_modules:$NAVE_ROOT/$NAVENAME/lib/node
 #NAVELVL=1
 
 #jsctags
-NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
+NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
 unsetopt ALL_EXPORT
 # vi:ft=zsh
