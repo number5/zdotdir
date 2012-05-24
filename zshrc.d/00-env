@@ -15,8 +15,7 @@ VIRTUALENV_USE_DISTRIBUTE=1
 DF_LOG_DIR=~/tmp
 
 # TERM
-TERM=xterm-256color 
-ZSH_THEME_TERM_TITLE_IDLE="%~ (%n@%m)" 
+TERM=${TERM:-xterm-256color}
 
 # node/nave
 

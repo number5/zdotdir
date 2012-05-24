@@ -3,7 +3,7 @@ alias try="buildbot try"
 alias tryut="buildbot try -b general10.04"
 alias tryft="buildbot try -b general10.04ft"
 
-alias venv="virtualenv --python=python2.7 --system-site-packages --distribute"
+alias venv="virtualenv --distribute"
 alias lighton='disper -d DFP-0,DFP-3 -r 1920x1080,1600x900 -e -t right'
 alias ack='ack-grep'
 alias dt='./bin/dftrial --reporter=text --skip="longrunning"'
@@ -93,6 +93,9 @@ alias gpush='git push -u origin $(current_branch)'
 
 # grml aliases
 
-
+# gvim workaround for 12.04 global menu bug
+function gvim {
+    /usr/bin/gvim -f $* > /dev/null 2> /dev/null & disown
+}
 
 # vim:ft=zsh
