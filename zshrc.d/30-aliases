@@ -1,12 +1,10 @@
 
-alias try="buildbot try"
-alias tryut="buildbot try -b general10.04"
-alias tryft="buildbot try -b general10.04ft"
-
+# virtualenv/ venv
 alias venv="virtualenv --distribute"
-alias lighton='disper -d DFP-0,DFP-3 -r 1920x1080,1600x900 -e -t right'
+alias va='. .venv/bin/activate'
+alias pi='./.venv/bin/pip'
+
 alias ack='ack-grep'
-alias dt='./bin/dftrial --reporter=text --skip="longrunning"'
 alias tag='git describe --abbrev=0'
 alias gbm='git branch --merged'
 alias gfc='git fetch origin'
@@ -31,7 +29,6 @@ alias rm='nocorrect rm'
 alias find='noglob find'
 alias w3m='noglob w3m -no-mouse'
 alias links='noglob links'
-alias wb='noglob www-browser'
 alias wget='noglob wget'
 alias curl='noglob curl'
 alias locate='noglob locate'
@@ -54,6 +51,7 @@ alias lart='ls -lart'
 # ubuntu
 alias acp="apt-cache policy"
 alias acs="apt-cache search"
+alias agi="sudo apt-get install"
 
 
 if whence mtail >/dev/null; then
