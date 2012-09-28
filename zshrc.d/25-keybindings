@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+bindkey  "${terminfo[khome]}"    beginning-of-line
+bindkey  "${terminfo[kend]}"     end-of-line
+bindkey  "${terminfo[kich1]}"  overwrite-mode
+bindkey  "${terminfo[kdch1]}"  delete-char
+# Up key should keep for history-substring-search.zsh
+# bindkey  "${terminfo[kcuu1]}"   up-line-or-history
+#bindkey  "${terminfo[kcud1]}"    down-line-or-history
+bindkey  "${terminfo[kcub1]}"    backward-char
+bindkey  "${terminfo[kcuf1]}"   forward-char
+
+# Finally, make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
+function zle-line-init () {
+    echoti smkx
+}
+function zle-line-finish () {
+    echoti rmkx
+}
+zle -N zle-line-init
+zle -N zle-line-finish  
+
+# vim: ft=zsh
