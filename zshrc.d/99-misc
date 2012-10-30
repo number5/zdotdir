@@ -11,3 +11,17 @@ setopt long_list_jobs
 ## pager
 export PAGER=less
 export LC_CTYPE=$LANG
+
+## dirstack
+setopt autopushd
+DIRSTACKSIZE=9
+DIRSTACKFILE=$HOME/.var/.zdirs
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+  dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+  [[ -d $dirstack[1] ]] && cd $dirstack[1] && cd $OLDPWD
+fi
+chpwd() {
+  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+}
+chpwd_functions+=chpwd
+

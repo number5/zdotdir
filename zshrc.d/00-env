@@ -34,7 +34,5 @@ NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
 #mpc
 MPD_PORT=6600
 
-
-HISTFILE=$HOME/.var/zsh_history
 unsetopt ALL_EXPORT
 # vi:ft=zsh
