@@ -22,13 +22,19 @@ TERM=${TERM:-xterm-256color}
 NAVE_DIR=$HOME/.nave
 NAVE_SRC=$NAVE_DIR/src
 NAVE_ROOT=$NAVE_DIR/installed
-NAVEVERSION=0.8.8
+NAVEVERSION=0.8.11
 NAVENAME=default
-PATH=$NAVE_ROOT/$NAVENAME/bin:$NAVE_ROOT/$NAVEVERSION/bin:/opt/vagrant/bin:/opt/eclipse:/opt/android-sdk-linux/platform-tools:$PATH
+PATH=$NAVE_ROOT/$NAVENAME/bin:$NAVE_ROOT/$NAVEVERSION/bin:/opt/eclipse:/opt/android-sdk-linux/platform-tools:$PATH
 NODE_PATH=$NAVE_ROOT/$NAVENAME/lib/node_modules:$NAVE_ROOT/$NAVENAME/lib/node
 #NAVELVL=1
 
 #jsctags
 NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
+
+#mpc
+MPD_PORT=6600
+
+
+HISTFILE=$HOME/.var/zsh_history
 unsetopt ALL_EXPORT
 # vi:ft=zsh
