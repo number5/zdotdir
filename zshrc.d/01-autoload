@@ -13,6 +13,7 @@ autoload -U colors ; colors
 # allow zwc file recompiling
 autoload -U zrecompile
 
+autoload -U complist
 autoload -U compinit; compinit
 
 autoload -Uz add-zsh-hook

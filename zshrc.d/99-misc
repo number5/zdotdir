@@ -25,3 +25,7 @@ chpwd() {
 }
 chpwd_functions+=chpwd
 
+## compl style
+zstyle ':completion:*' menu select=6 
+
+# vi: ft=zsh
