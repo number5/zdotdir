@@ -28,4 +28,12 @@ chpwd_functions+=chpwd
 ## compl style
 zstyle ':completion:*' menu select=6 
 
+
+## functions
+bzr-git-sync() {
+bzr pull
+bzr fast-export |git fast-import
+git reset --hard
+git push origin master
+}
 # vi: ft=zsh

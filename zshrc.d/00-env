@@ -34,5 +34,8 @@ NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
 #mpc
 MPD_PORT=6600
 
+#ubuntu/deb pkg
+DEBFULLNAME="Bruce Wang"
+DEBEMAIL="number5@gmail.com"
 unsetopt ALL_EXPORT
 # vi:ft=zsh

@@ -92,8 +92,8 @@ alias gpush='git push -u origin $(current_branch)'
 # grml aliases
 
 # gvim workaround for 12.04 global menu bug
-function gvim {
-    /usr/bin/gvim -f $* > /dev/null 2> /dev/null & disown
-}
+#function gvim {
+#    /usr/bin/gvim -f $* > /dev/null 2> /dev/null & disown
+#}
 
 # vim:ft=zsh
