@@ -10,7 +10,7 @@ alias gbm='git branch --merged'
 alias gfc='git fetch origin'
 alias gpull='git pull'
 alias gds="git diff --stat"
-alias gl="git log --graph --pretty=format:'%C(magenta)%h%Creset -%C(bold green)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gl="git log --graph --pretty=format:'%C(magenta)%h%Creset %w(72,1,2)%Cgreen(%cr) -%C(bold green)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gr='git remote -v'
 alias gs="git status"
 alias igu='iconv -f gb18030 -t utf8'
