@@ -8,7 +8,7 @@ alias ack='ack-grep'
 alias tag='git describe --abbrev=0'
 alias gbm='git branch --merged'
 alias gfc='git fetch origin'
-alias gpull='git pull'
+alias gpull='git pull --rebase'
 alias gds="git diff --stat"
 alias gl="git log --graph --pretty=format:'%C(magenta)%h%Creset %w(72,1,2)%Cgreen(%cr) -%C(bold green)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gr='git remote -v'
@@ -87,9 +87,8 @@ function current_branch() {
 
 # these aliases take advantage of the previous function
 alias gpush='git push -u origin $(current_branch)'
+alias gpj='git push origin HEAD:refs/heads/jenkins '
 
-
-# grml aliases
 
 # gvim workaround for 12.04 global menu bug
 #function gvim {
