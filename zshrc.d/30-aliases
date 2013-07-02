@@ -90,6 +90,8 @@ alias gpush='git push -u origin $(current_branch)'
 alias gpj='git push origin HEAD:refs/heads/jenkins '
 
 
+alias ':wq'='echo "You are not in vim, dummy"'
+
 # gvim workaround for 12.04 global menu bug
 #function gvim {
 #    /usr/bin/gvim -f $* > /dev/null 2> /dev/null & disown

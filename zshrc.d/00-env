@@ -27,7 +27,7 @@ PATH=$NAVE_ROOT/$NAVEVERSION/bin:/opt/eclipse:/opt/android-sdk-linux/platform-to
 NODE_PATH=$NAVE_ROOT/$NAVEVERSION/lib/node_modules
 #NAVELVL=1
 
-PATH=/opt/eclipse:/opt/android-sdk-linux/platform-tools:$PATH
+PATH=/opt/eclipse:$PATH
 #jsctags
 NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
 
@@ -37,5 +37,8 @@ MPD_PORT=6600
 #ubuntu/deb pkg
 DEBFULLNAME="Bruce Wang"
 DEBEMAIL="number5@gmail.com"
+
+# aws cli
+AWS_DEFAULT_REGION=ap-southeast-2
 unsetopt ALL_EXPORT
 # vi:ft=zsh
