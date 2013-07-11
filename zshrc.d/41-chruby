@@ -2,4 +2,7 @@
 RUBIES=(/home/bruce/.rbenv/versions/*)
 source /usr/local/share/chruby/chruby.sh
 
+# default => ruby-1.9
+chruby ruby-1.9
+
 # vim: ft=zsh
