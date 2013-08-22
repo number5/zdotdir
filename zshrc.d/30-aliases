@@ -97,4 +97,9 @@ alias ':wq'='echo "You are not in vim, dummy"'
 #    /usr/bin/gvim -f $* > /dev/null 2> /dev/null & disown
 #}
 
+# pbcopy/paste
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+
 # vim:ft=zsh
