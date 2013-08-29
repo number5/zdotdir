@@ -2,17 +2,16 @@
 
 setopt ALL_EXPORT
 # editor
-EDITOR=vi
-VISUAL=vi
+EDITOR=vim
+VISUAL=vim
 
 # color setup for ls
 
-eval $(dircolors -b)
+#eval $(dircolors -b)
 
 # python env
 PYTHONPATH=.
 VIRTUALENV_USE_DISTRIBUTE=1
-DF_LOG_DIR=~/tmp
 
 # TERM
 TERM=${TERM:-xterm-256color}
@@ -27,7 +26,7 @@ PATH=$NAVE_ROOT/$NAVEVERSION/bin:/opt/eclipse:/opt/android-sdk-linux/platform-to
 NODE_PATH=$NAVE_ROOT/$NAVEVERSION/lib/node_modules
 #NAVELVL=1
 
-PATH=/opt/eclipse:$PATH
+PATH=/usr/local/bin:$HOME/bin:$PATH
 #jsctags
 NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
 

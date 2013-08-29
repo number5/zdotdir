@@ -4,7 +4,7 @@ alias venv="virtualenv --distribute"
 alias va='. .venv/bin/activate'
 alias pi='./.venv/bin/pip'
 
-alias ack='ack-grep'
+#alias ack='ack-grep'
 alias tag='git describe --abbrev=0'
 alias gbm='git branch --merged'
 alias gfc='git fetch origin'
@@ -15,13 +15,14 @@ alias gr='git remote -v'
 alias gs="git status"
 alias igu='iconv -f gb18030 -t utf8'
 alias q='qgit'
-alias v="gvim --remote-silent"
+#alias v="gvim --remote-silent"
 alias rmpyc='zargs **/*.pyc -- rm'
 alias rmorig='zargs **/*.orig -- rm'
 alias tmux='tmux -2'
-alias vi='TERM=xterm-256color vim'
+alias vi='TERM=xterm-256color mvim -v'
+alias vim='vi'
 
-alias mv='nocorrect mv'
+#alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias ln='nocorrect ln'
 alias mkdir='nocorrect mkdir'
@@ -33,11 +34,7 @@ alias wget='noglob wget'
 alias curl='noglob curl'
 alias locate='noglob locate'
 
-typeset -a _ls_opts; _ls_opts=(-bCF --color=auto)
-command ls --group-directories-first >/dev/null 2>&1 \
-  && _ls_opts+=--group-directories-first
-# I prefer POSIX collation for ls
-alias ls="LC_COLLATE=POSIX ls $_ls_opts"
+alias ls='ls -G'
 
 alias ll='ls -l'
 alias l=ll
@@ -49,9 +46,9 @@ alias lat='ls -lat'
 alias lart='ls -lart'
 
 # ubuntu
-alias acp="apt-cache policy"
-alias acs="apt-cache search"
-alias agi="sudo apt-get install"
+#alias acp="apt-cache policy"
+#alias acs="apt-cache search"
+#alias agi="sudo apt-get install"
 
 
 if whence mtail >/dev/null; then
@@ -96,10 +93,6 @@ alias ':wq'='echo "You are not in vim, dummy"'
 #function gvim {
 #    /usr/bin/gvim -f $* > /dev/null 2> /dev/null & disown
 #}
-
-# pbcopy/paste
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
 
 
 # vim:ft=zsh
