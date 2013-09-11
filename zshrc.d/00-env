@@ -18,20 +18,20 @@ TERM=${TERM:-xterm-256color}
 
 # node/nave
 
-NAVE_DIR=$HOME/.nave
-NAVE_SRC=$NAVE_DIR/src
-NAVE_ROOT=$NAVE_DIR/installed
-NAVEVERSION=0.8.21
-PATH=$NAVE_ROOT/$NAVEVERSION/bin:/opt/eclipse:/opt/android-sdk-linux/platform-tools:$PATH
-NODE_PATH=$NAVE_ROOT/$NAVEVERSION/lib/node_modules
+#NAVE_DIR=$HOME/.nave
+#NAVE_SRC=$NAVE_DIR/src
+#NAVE_ROOT=$NAVE_DIR/installed
+#NAVEVERSION=0.8.21
+#PATH=$NAVE_ROOT/$NAVEVERSION/bin:/opt/eclipse:/opt/android-sdk-linux/platform-tools:$PATH
+#NODE_PATH=$NAVE_ROOT/$NAVEVERSION/lib/node_modules
 #NAVELVL=1
 
-PATH=/usr/local/bin:$HOME/bin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 #jsctags
-NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
+#NODE_PATH=$NODE_PATH:/usr/local/lib/jsctags/
 
 #mpc
-MPD_PORT=6600
+#MPD_PORT=6600
 
 #ubuntu/deb pkg
 DEBFULLNAME="Bruce Wang"
