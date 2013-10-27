@@ -26,4 +26,5 @@ if [[ -o rcs ]]; then
   unset _DIR
 fi
 
+unsetopt NULL_GLOB EXTENDED_GLOB
 # vim:ft=zsh
