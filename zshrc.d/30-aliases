@@ -14,7 +14,6 @@ alias gl="git log --graph --pretty=format:'%C(magenta)%h%Creset %w(72,1,2)%Cgree
 alias gr='git remote -v'
 alias gs="git status"
 alias igu='iconv -f gb18030 -t utf8'
-alias q='qgit'
 #alias v="gvim --remote-silent"
 alias rmpyc='zargs **/*.pyc -- rm'
 alias rmorig='zargs **/*.orig -- rm'
@@ -44,11 +43,6 @@ alias lt='ls -lt'
 alias lrt='ls -lrt'
 alias lat='ls -lat'
 alias lart='ls -lart'
-
-# ubuntu
-#alias acp="apt-cache policy"
-#alias acs="apt-cache search"
-#alias agi="sudo apt-get install"
 
 
 if whence mtail >/dev/null; then
