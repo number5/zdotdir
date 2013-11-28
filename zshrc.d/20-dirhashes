@@ -1,4 +1,4 @@
-cdpath=(. ~/work ~/src/git)
+cdpath=(. ~/work ~/src/git ~/multimc5_data/instances)
 
 hash -d doc=/usr/share/doc
 hash -d log=/var/log
