@@ -1,5 +1,4 @@
 # for chruby
-RUBIES=(/home/bruce/.rbenv/versions/*)
 source /usr/local/share/chruby/chruby.sh
 
 # default => ruby-1.9
