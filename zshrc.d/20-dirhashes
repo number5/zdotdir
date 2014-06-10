@@ -1,4 +1,4 @@
-cdpath=(. ~/work ~/src/git ~/multimc5_data/instances)
+cdpath=(. ~/work ~/src/git)
 
 
 # vim:ft=zsh

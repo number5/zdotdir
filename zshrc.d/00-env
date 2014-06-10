@@ -26,5 +26,8 @@ PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 
 # aws cli
 AWS_DEFAULT_REGION=ap-southeast-2
+
+
+GOPATH=/Users/bruce/go
 unsetopt ALL_EXPORT
 # vi:ft=zsh
