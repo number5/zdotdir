@@ -21,13 +21,15 @@ TERM=${TERM:-xterm-256color}
 
 NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
-PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
+PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 
 # aws cli
 AWS_DEFAULT_REGION=ap-southeast-2
 
-
+# Golang
 GOPATH=/Users/bruce/go
+PATH=$PATH:$GOPATH/bin
+
 unsetopt ALL_EXPORT
 # vi:ft=zsh
