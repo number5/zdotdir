@@ -46,16 +46,12 @@ alias lat='ls -lat'
 alias lart='ls -lart'
 
 
-if whence mtail >/dev/null; then
-  alias t=mtail
-elif whence tailf >/dev/null; then
-  alias t=tailf
-else
-  alias t='tail -f'
-fi
+
+alias tf='tail -f'
+
 alias sensible-pager='less'
 
-alias px='ps afux'
+alias px='ps aux'
 alias mps='ps -ao user,pcpu,start,command'
 
 function of() { lsof -np "$1" }
@@ -83,11 +79,5 @@ alias gpj='git push origin HEAD:refs/heads/jenkins '
 
 
 alias ':wq'='echo "You are not in vim, dummy"'
-
-# gvim workaround for 12.04 global menu bug
-#function gvim {
-#    /usr/bin/gvim -f $* > /dev/null 2> /dev/null & disown
-#}
-
 
 # vim:ft=zsh

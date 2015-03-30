@@ -1,7 +1,6 @@
 # for chruby
 source /usr/local/share/chruby/chruby.sh
 
-# default => ruby-1.9
-chruby ruby-1.9
+chruby ruby-2.1.5
 
 # vim: ft=zsh
